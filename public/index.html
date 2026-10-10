@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kotki i Pieski 🐱🐶</title>
+  <meta name="description" content="Strona o kotkach i pieskach — losowe ciekawostki i zdjęcia, napędzana przez Cloudflare Workers." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Kotki <span>i</span> Pieski</h1>
+    <p class="subtitle">Najsłodszy zakątek internetu — napędzany przez Cloudflare Workers ⚡</p>
+    <button id="random-btn" class="btn" type="button">Pokaż losowe zwierzątko 🎲</button>
+  </header>
+
+  <main>
+    <section id="card" class="card hidden" aria-live="polite">
+      <img id="card-img" class="card-img" alt="Losowe zwierzątko" loading="lazy" />
+      <div class="card-body">
+        <h2 id="card-title"></h2>
+        <p id="card-fact"></p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="tile cat">
+        <h3>🐱 Koty</h3>
+        <p>Niezależne, eleganckie i pełne tajemnic. Mruczą, gdy są szczęśliwe, i potrafią spać nawet 16 godzin na dobę.</p>
+      </article>
+      <article class="tile dog">
+        <h3>🐶 Psy</h3>
+        <p>Wierni przyjaciele człowieka. Uwielbiają spacery, zabawę i przysmaki, a ich węch jest nawet 40 razy czulszy niż nasz.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zbudowane z ❤️ • <span id="year"></span> • Cloudflare Workers</p>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
